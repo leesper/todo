@@ -1,8 +1,8 @@
 package com.ddd.todo.domain;
 
 public class TodoItem {
-    public TodoItem(int i, String c) {
-        index = i;
+    public TodoItem(String c) {
+        index = -1;
         content = c;
         done = false;
     }
@@ -13,6 +13,22 @@ public class TodoItem {
 
     public void setDone(boolean d) {
         done = d;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int i) {
+        index = i;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String c) {
+        content = c;
     }
 
     private int index;
