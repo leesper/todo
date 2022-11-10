@@ -19,7 +19,7 @@ public class TodoItemService {
     public void done(int i) {
         TodoItem item = repository.get(i);
         item.setDone(true);
-        repository.save(item);
+        repository.save(item, i);
     }
 
     public List<TodoItem> list(boolean all) {

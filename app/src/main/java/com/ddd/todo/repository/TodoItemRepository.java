@@ -8,7 +8,7 @@ public interface TodoItemRepository {
     void add(TodoItem item);
     TodoItem get(int index);
     
-    void save(TodoItem item);
+    void save(TodoItem item, int index);
 
     List<TodoItem> list();
 }

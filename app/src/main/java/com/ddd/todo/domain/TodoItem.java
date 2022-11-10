@@ -1,6 +1,7 @@
 package com.ddd.todo.domain;
 
 public class TodoItem {
+    public TodoItem() {}
     public TodoItem(String c) {
         index = -1;
         content = c;

@@ -21,8 +21,11 @@ public class TodoItemFakeRepository implements TodoItemRepository {
     }
 
     @Override
-    public void save(TodoItem item) {
-        items.set(item.getIndex() - 1, item);
+    public void save(TodoItem item, int index) {
+        if (1 <= index && index <= items.size()) {
+            items.set(index - 1, item);
+        }
+
     }
 
     @Override
