@@ -12,14 +12,16 @@ public class TodoItemService {
         repository = repo;
     }
 
-    public void addItem(TodoItem item) {
+    public TodoItem addItem(TodoItem item) {
         repository.add(item);
+        return item;
     }
 
-    public void done(int i) {
+    public TodoItem done(int i) {
         TodoItem item = repository.get(i);
         item.setDone(true);
         repository.save(item, i);
+        return item;
     }
 
     public List<TodoItem> list(boolean all) {

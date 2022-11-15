@@ -17,11 +17,10 @@ public class Command {
             cmd = args[0];
             if (args.length == 2) {
                 flag = args[1];
-                arg = null;
             } else {
                 flag = null;
-                arg = null;
             }
+            arg = null;
 
         }
     }
